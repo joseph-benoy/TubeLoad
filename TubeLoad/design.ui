@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>797</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>797</width>
+    <height>597</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>797</width>
+    <height>597</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft YaHei UI</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>TubeDown</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/icons8-youtube-squared-100.png</normaloff>images/icons8-youtube-squared-100.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>20</width>
+    <height>20</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="UrlInput">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>621</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Enter a valid youtube url or video ID</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="VerifyBtn">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Verify</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/icons8-link-64.png</normaloff>images/icons8-link-64.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>761</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Video details</string>
+    </property>
+    <widget class="QLabel" name="Title">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>701</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Video title : None</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Duration">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>701</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Duration :None</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>761</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Download options</string>
+    </property>
+    <widget class="QRadioButton" name="NormalRadio">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Normal</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="VideoRadio">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>40</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Video Only</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="AudioRadio">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>40</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Audio Only</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="NormalList">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="VideoList">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>80</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="AudioList">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>80</y>
+       <width>191</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="DestInput">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>621</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="placeholderText">
+      <string>Select a destination</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="FolderBtn">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>150</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Select folder</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/icons8-file-64.png</normaloff>images/icons8-file-64.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DownloadBtn">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>200</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>141</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>141</width>
+       <height>41</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Download</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/icons8-download-26 (2).png</normaloff>images/icons8-download-26 (2).png</iconset>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QProgressBar" name="ProgressBar">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>510</y>
+      <width>751</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ProgressLabel">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>480</y>
+      <width>701</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Download progress</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
